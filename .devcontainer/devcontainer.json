@@ -1,0 +1,27 @@
+{
+  "name": "codeforces-drewdomi",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "features": {
+    "ghcr.io/devcontainers/features/go": {
+      "version": "1.22.2"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "tamasfe.even-better-toml",
+        "golang.go",
+        "redhat.vscode-yaml",
+        "oderwat.indent-rainbow"
+      ],
+      "settings": {
+        "editor.formatOnPaste": true
+      }
+    }
+  },
+  "mounts": [
+    "type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly"
+  ],
+  "remoteUser": "vscode"
+}
